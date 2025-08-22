@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Details — SARKARIIRESULT.COM</title>
+  <style>
+    :root{--bg:#0f172a; --card:#0b1220; --muted:#94a3b8; --text:#e2e8f0; --ring:#334155; --accent:#22c55e;}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Noto Sans",sans-serif}
+    .wrap{max-width:900px;margin:auto;padding:16px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));border:1px solid var(--ring);border-radius:16px;padding:16px;box-shadow:0 6px 20px rgba(0,0,0,.22)}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+    a{color:#93c5fd;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--ring);background:#101a32;color:#e2e8f0;margin-right:8px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    @media (max-width:700px){.grid{grid-template-columns:1fr}}
+    .k{color:#cbd5e1}
+    .v{font-weight:700}
+    .badge{border:1px solid var(--ring);border-radius:999px;padding:4px 8px;font-size:12px;color:#cbd5e1}
+    .back{margin-bottom:12px;display:inline-block}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← Back to Home</a>
+    <div id="root" class="card">Loading…</div>
+  </div>
+
+  <script src="data.js"></script>
+  <script>
+    function getParam(key){return new URL(location.href).searchParams.get(key)}
+    const id = getParam('id');
+    const all = [...DATA.jobs, ...DATA.results, ...DATA.admit, ...DATA.schemes, ...DATA.daily, ...DATA.docs];
+    const it = all.find(x=>x.id===id);
+    const root = document.getElementById('root');
+
+    if(!it){
+      root.innerHTML = `<h2>Not Found</h2><p>Item doesn't exist. <a href="index.html">Go Home</a></p>`;
+    } else {
+      root.innerHTML = `
+        <div class="top">
+          <h2 style="margin:0">${it.title}</h2>
+          ${it.tag?`<span class="badge">${it.tag}</span>`:''}
+        </div>
+        <p style="margin-top:0;color:#cbd5e1">${it.org || ''} ${it.date? ' • '+it.date:''}</p>
+
+        <div class="grid">
+          ${it.start?`<div><span class="k">Start Date:</span> <span class="v">${it.start}</span></div>`:''}
+          ${it.last?`<div><span class="k">Last Date:</span> <span class="v">${it.last}</span></div>`:''}
+          ${it.fee?`<div><span class="k">Application Fee:</span> <span class="v">${it.fee}</span></div>`:''}
+          ${it.age?`<div><span class="k">Age Limit:</span> <span class="v">${it.age}</span></div>`:''}
+          ${it.qual?`<div><span class="k">Qualification:</span> <span class="v">${it.qual}</span></div>`:''}
+          ${it.post?`<div><span class="k">Post Name:</span> <span class="v">${it.post}</span></div>`:''}
+          ${it.vacancy?`<div><span class="k">Total Vacancies:</span> <span class="v">${it.vacancy}</span></div>`:''}
+          ${it.status?`<div><span class="k">Status:</span> <span class="v">${it.status}</span></div>`:''}
+        </div>
+
+        <div style="margin-top:16px">
+          ${it.notif_url?`<a class="btn" href="${it.notif_url}" target="_blank" rel="noopener">Official Notification (PDF)</a>`:''}
+          ${it.apply_url?`<a class="btn" href="${it.apply_url}" target="_blank" rel="noopener">Apply Online</a>`:''}
+          ${it.website?`<a class="btn" href="${it.website}" target="_blank" rel="noopener">Official Website</a>`:''}
+          ${it.result_url?`<a class="btn" href="${it.result_url}" target="_blank" rel="noopener">Check Result</a>`:''}
+          ${it.admit_url?`<a class="btn" href="${it.admit_url}" target="_blank" rel="noopener">Download Admit Card</a>`:''}
+        </div>
+
+        ${it.note?`<p style="margin-top:16px;color:#cbd5e1">${it.note}</p>`:''}
+      `;
+    }
+  </script>
+</body>
+</html>
