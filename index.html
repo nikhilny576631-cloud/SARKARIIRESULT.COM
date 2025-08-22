@@ -1,122 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SARKARIIRESULT.COM — Govt Updates</title>
-  <meta name="description" content="Government Jobs • Results • Admit Cards • Schemes • Daily Documents" />
-  <style>
-    :root{
-      --bg:#0f172a; --card:#0b1220; --muted:#94a3b8; --text:#e2e8f0; --ring:#334155; --accent:#22c55e;
-      --orange:#ff7a00; --white:#ffffff; --green:#1faa59;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Noto Sans",sans-serif}
-    a{color:#93c5fd;text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1150px;margin:auto;padding:16px}
-    .banner{display:flex;align-items:center;gap:16px;border-radius:16px;overflow:hidden;margin:8px 0 16px;box-shadow:0 10px 30px rgba(0,0,0,.25);position:relative}
-    .flag{display:flex;height:72px;flex:1;min-width:260px}
-    .flag > div{flex:1}
-    .flag .o{background:var(--orange)} .flag .w{background:var(--white)} .flag .g{background:var(--green)}
-    .brand{position:absolute;width:100%;text-align:center;font-weight:900;font-size:clamp(18px,4vw,30px);letter-spacing:.5px;color:#0b1220;mix-blend-mode:luminosity}
-    .subtitle{margin-top:6px;font-size:14px;color:#cbd5e1;text-align:center}
-    .badge{background:rgba(255,255,255,.06);border:1px solid var(--ring);padding:6px 10px;border-radius:999px;font-size:12px;margin-left:auto}
-    .grid{display:grid;gap:16px;grid-template-columns: repeat(12, 1fr);margin-top:14px}
-    .col-4{grid-column: span 4}
-    @media (max-width: 900px){ .col-4{grid-column: span 6} }
-    @media (max-width: 640px){ .grid{grid-template-columns: repeat(1, 1fr)} .col-4{grid-column:auto} }
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));border:1px solid var(--ring);border-radius:16px;padding:14px 14px 8px;box-shadow:0 6px 20px rgba(0,0,0,.22)}
-    .head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-    .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
-    .title{font-weight:800;letter-spacing:.3px}
-    .list{list-style:none;margin:8px 0 8px;padding:0;max-height:420px;overflow:auto}
-    .list li{display:flex;gap:8px;padding:8px;border-radius:10px;align-items:flex-start}
-    .list li:hover{background:rgba(255,255,255,.04)}
-    .tag{font-size:11px;border:1px solid var(--ring);padding:2px 6px;border-radius:999px;color:var(--muted);white-space:nowrap}
-    .item{display:flex;flex-direction:column;gap:4px;flex:1}
-    .item .t{font-weight:700}
-    .meta{font-size:12px;color:var(--muted)}
-    .search{margin:8px 0 16px;display:flex;gap:8px}
-    .search input{flex:1;padding:10px 12px;border-radius:12px;border:1px solid var(--ring);background:#0b1220;color:var(--text)}
-    .search button{padding:10px 14px;border-radius:12px;border:1px solid var(--ring);background:#101a32;color:var(--text);cursor:pointer}
-    .footer{margin:20px 0 8px;text-align:center;color:var(--muted);font-size:13px}
-    .hidden{display:none}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SARKARIIRESULT.COM — Govt Updates</title>
+<meta name="description" content="Government Jobs • Results • Admit Cards • Schemes • Daily Documents (Official Links)">
+<style>
+  :root{
+    --bg:#0f172a; --panel:#0b1220; --ring:#334155; --text:#e2e8f0; --muted:#94a3b8; --accent:#22c55e;
+    --orange:#ff7a00; --white:#ffffff; --green:#1faa59;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Noto Sans",sans-serif}
+  a{color:#93c5fd;text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:1150px;margin:auto;padding:16px}
+  .banner{display:flex;align-items:center;gap:16px;border-radius:16px;overflow:hidden;margin:8px 0 16px;box-shadow:0 10px 30px rgba(0,0,0,.25);position:relative}
+  .flag{display:flex;height:72px;flex:1;min-width:260px}
+  .flag>div{flex:1}
+  .o{background:var(--orange)} .w{background:var(--white)} .g{background:var(--green)}
+  .brand{position:absolute;width:100%;text-align:center;font-weight:900;font-size:clamp(18px,4vw,30px);letter-spacing:.5px;color:#0b1220;mix-blend-mode:luminosity}
+  .subtitle{margin-top:6px;font-size:14px;color:#cbd5e1;text-align:center}
+  .badge{background:rgba(255,255,255,.06);border:1px solid var(--ring);padding:6px 10px;border-radius:999px;font-size:12px;margin-left:auto}
+  .search{margin:8px 0 16px;display:flex;gap:8px}
+  .search input{flex:1;padding:10px 12px;border-radius:12px;border:1px solid var(--ring);background:#0b1220;color:var(--text)}
+  .search button{padding:10px 14px;border-radius:12px;border:1px solid var(--ring);background:#101a32;color:var(--text);cursor:pointer}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(12,1fr);margin-top:14px}
+  .col-4{grid-column:span 4}
+  @media (max-width:900px){.col-4{grid-column:span 6}}
+  @media (max-width:640px){.grid{grid-template-columns:repeat(1,1fr)} .col-4{grid-column:auto}}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid var(--ring);border-radius:16px;padding:14px 14px 8px;box-shadow:0 6px 20px rgba(0,0,0,.22)}
+  .head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+  .title{font-weight:800;letter-spacing:.3px}
+  .list{list-style:none;margin:8px 0;padding:0;max-height:440px;overflow:auto}
+  .list li{display:flex;gap:8px;padding:8px;border-radius:10px;align-items:flex-start}
+  .list li:hover{background:rgba(255,255,255,.04)}
+  .item{display:flex;flex-direction:column;gap:4px;flex:1}
+  .item .t{font-weight:700}
+  .meta{font-size:12px;color:var(--muted)}
+  .tag{font-size:11px;border:1px solid var(--ring);padding:2px 6px;border-radius:999px;color:var(--muted);white-space:nowrap}
+  .footer{margin:20px 0 8px;text-align:center;color:var(--muted);font-size:13px}
+  .hidden{display:none}
+
+  /* Details view */
+  #view-details{max-width:900px;margin:auto;padding:16px}
+  .card-detail{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid var(--ring);border-radius:16px;padding:16px;box-shadow:0 6px 20px rgba(0,0,0,.22)}
+  .top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .badge2{border:1px solid var(--ring);border-radius:999px;padding:4px 8px;font-size:12px;color:#cbd5e1}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  @media (max-width:700px){.grid2{grid-template-columns:1fr}}
+  .k{color:#cbd5e1} .v{font-weight:700}
+  .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--ring);background:#101a32;color:#e2e8f0;margin-right:8px}
+  .back{display:inline-block;margin:8px 0}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="banner" aria-label="Site banner">
-      <div class="flag"><div class="o"></div><div class="w"></div><div class="g"></div></div>
-      <div class="brand">SARKARIIRESULT.COM</div>
-    </div>
-    <div class="subtitle">Government Jobs • Results • Admit Cards • Schemes • Daily Documents (Official links only)</div>
+<div id="app">
+  <div id="view-home">
+    <div class="wrap">
+      <div class="banner" aria-label="Site banner">
+        <div class="flag"><div class="o"></div><div class="w"></div><div class="g"></div></div>
+        <div class="brand">SARKARIIRESULT.COM</div>
+      </div>
+      <div class="subtitle">Government Jobs • Results • Admit Cards • Schemes • Daily Documents (Official links only)</div>
 
-    <div class="search">
-      <input id="q" placeholder="Search (e.g., SSC, UPSC, Police, Admit Card)">
-      <button onclick="doSearch()">Search</button>
-      <button onclick="resetSearch()">Reset</button>
-      <span class="badge" id="lastUpdate"></span>
-    </div>
+      <div class="search">
+        <input id="q" placeholder="Search (e.g., SSC, UPSC, Police, Admit Card)" onkeydown="if(event.key==='Enter')doSearch()">
+        <button onclick="doSearch()">Search</button>
+        <button onclick="resetSearch()">Reset</button>
+        <span class="badge" id="lastUpdate"></span>
+      </div>
 
-    <div class="grid">
-      <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Results</div></div><ul class="list" id="list-results"></ul></section>
-      <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Admit Card</div></div><ul class="list" id="list-admit"></ul></section>
-      <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Latest Jobs</div></div><ul class="list" id="list-jobs"></ul></section>
-      <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Latest Govt Schemes</div></div><ul class="list" id="list-schemes"></ul></section>
-      <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Daily Life</div></div><ul class="list" id="list-daily"></ul></section>
-      <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">All Other Documents</div></div><ul class="list" id="list-docs"></ul></section>
-    </div>
+      <div class="grid">
+        <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Results</div></div><ul class="list" id="list-results"></ul></section>
+        <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Admit Card</div></div><ul class="list" id="list-admit"></ul></section>
+        <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Latest Jobs</div></div><ul class="list" id="list-jobs"></ul></section>
+        <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Latest Govt Schemes</div></div><ul class="list" id="list-schemes"></ul></section>
+        <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Daily Life</div></div><ul class="list" id="list-daily"></ul></section>
+        <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">All Other Documents</div></div><ul class="list" id="list-docs"></ul></section>
+      </div>
 
-    <div class="footer">
-      © <span id="yr"></span> SARKARIIRESULT.COM • No ads • Only official links.
-      <br/>Disclaimer: We do not copy other websites’ content. Always verify details from official notification PDF.
+      <div class="footer">
+        © <span id="yr"></span> SARKARIIRESULT.COM • Only official links • No ads.
+        <br>Disclaimer: Always verify from official notification PDF.
+      </div>
     </div>
   </div>
 
-  <script src="data.js"></script>
-  <script>
-    const map = {
-      results: document.getElementById('list-results'),
-      admit:   document.getElementById('list-admit'),
-      jobs:    document.getElementById('list-jobs'),
-      schemes: document.getElementById('list-schemes'),
-      daily:   document.getElementById('list-daily'),
-      docs:    document.getElementById('list-docs'),
-    };
-    function makeItem(it){
-      const li=document.createElement('li');
-      li.innerHTML = `
-        <div class="item">
-          <a class="t" href="details.html?id=${encodeURIComponent(it.id)}" rel="noopener">${it.title}</a>
-          <div class="meta">${it.org || ''} ${it.date? ' • '+it.date:''}</div>
-        </div>
-        ${it.tag?`<span class="tag">${it.tag}</span>`:''}
-      `;
-      return li;
-    }
-    function render(){
-      ['results','admit','jobs','schemes','daily','docs'].forEach(k=>{
-        map[k].innerHTML='';
-        (DATA[k]||[]).forEach(it=>map[k].appendChild(makeItem(it)));
-      });
-      document.getElementById('lastUpdate').textContent = "Updated: " + new Date(DATA.updatedAt||Date.now()).toLocaleString();
-      document.getElementById('yr').textContent = new Date().getFullYear();
-    }
-    function doSearch(){
-      const q = document.getElementById('q').value.trim().toLowerCase();
-      document.querySelectorAll('.list').forEach(ul=>{
-        Array.from(ul.children).forEach(li=>{
-          const txt = li.querySelector('.t').textContent.toLowerCase();
-          li.classList.toggle('hidden', q && !txt.includes(q));
-        });
-      });
-    }
-    function resetSearch(){
-      document.getElementById('q').value='';
-      document.querySelectorAll('.list .hidden').forEach(el=>el.classList.remove('hidden'));
-    }
-    render();
-  </script>
+  <div id="view-details" class="hidden">
+    <a class="back" href="#/">← Back to Home</a>
+    <div id="root" class="card-detail">Loading…</div>
+  </div>
+</div>
+
+<script>
+/* ===================== DATA (120+ OFFICIAL LINKS) ===================== */
+const DATA = {
+  updatedAt: new Date().toISOString(),
+
+  /* ----------------- JOBS (20) ----------------- */
+  jobs: [
+    { id:"job-ssc-cgl-2025", title:"SSC CGL 2025 Apply Online", org:"SSC", tag:"New",
+      start:"TBA", last:"TBA", fee:"UR/OBC: ₹100 • SC/ST/Female: ₹0", age:"18–32", qual:"Graduate",
+      post:"Group B & C", vacancy:"TBA",
+      notif_url:"https://ssc.nic.in/whatsnew", apply_url:"https://ssc.nic.in", website:"https://ssc.nic.in" },
+    { id:"job-ssc-chsl-2025", title:"SSC CHSL 2025 Online Form", org:"SSC",
+      start:"TBA", last:"TBA", fee:"UR/OBC: ₹100 • Others: ₹0", age:"18–27", qual:"12th",
+      post:"LDC/DEO/PA/SA", vacancy:"TBA",
+      notif_url:"https://ssc.nic.in/whatsnew", apply_url:"https://ssc.nic.in", website:"https://ssc.nic.in" },
+    { id:"job-ssc-gd-2025", title:"SSC GD Constable 2025", org:"SSC",
+      start:"TBA", last:"TBA", fee:"UR/OBC: ₹100 • Others: ₹0", age:"18–23", qual:"10th",
+      post:"GD Constable", vacancy:"TBA",
+      notif_url:"https://ssc.nic.in/whatsnew", apply_url:"https://ssc.nic.in", website:"https://ssc.nic.in" },
+    { id:"job-ssc-mts-2025", title:"SSC MTS 2025", org:"SSC",
+      start:"TBA", last:"TBA", fee:"UR/OBC: ₹100 • Others: ₹0", age:"18–25", qual:"10th",
+      post:"MTS/Havaldar", vacancy:"TBA",
+      notif_url:"https://ssc.nic.in/whatsnew", apply_url:"https://ssc.nic.in", website:"https://ssc.nic.in" },
+    { id:"job-upsc-cse-2026", title:"UPSC Civil Services Exam 2026", org:"UPSC",
+      start:"TBA", last:"TBA", fee:"UR: ₹100 • Female/SC/ST: ₹0", age:"21–32", qual:"Graduate",
+      post:"IAS/IPS/IFS etc.", vacancy:"TBA",
+      notif_url:"https://upsc.gov.in", apply_url:"https://upsconline.nic.in", website:"https://upsc.gov.in" },
+    { id:"job-upsc-capf-2025", title:"UPSC CAPF (AC) 2025", org:"UPSC",
+      start:"TBA", last:"TBA", fee:"UR: ₹200 • Female/SC/ST: ₹0", age:"20–25", qual:"Graduate",
+      post:"Assistant Commandant", vacancy:"TBA",
+      notif_url:"https://upsc.gov.in", apply_url:"https://upsconline.nic.in", website:"https://upsc.gov.in" },
+    { id:"job-upsc-ese-2026", title:"UPSC Engineering Services 2026", org:"UPSC",
+      start:"TBA", last:"TBA", fee:"UR: ₹200 • Female/SC/ST: ₹0", age:"21–30", qual:"BE/BTech",
+      post:"Group A Services", vacancy:"TBA",
+      notif_url:"https://upsc.gov.in", apply_url:"https://upsconline.nic.in", website:"https://upsc.gov.in" },
+    { id:"job-rrb-alp-2025", title:"RRB ALP 2025", org:"Railway Recruitment Boards",
+      start:"TBA", last:"TBA", fee:"UR/OBC: ₹500 • Others: ₹250 (refund rules)", age:"18–30", qual:"10+2/ITI/Diploma",
+      post:"Assistant Loco Pilot", vacancy:"TBA",
+      notif_url:"http://www.rrbcdg.gov.in", apply_url:"http://www.rrbcdg.gov.in", website:"https://indianrailways.gov.in" },
+    { id:"job-rrb-technician-2025", title:"RRB Technician 2025", org:"Railway Recruitment Boards",
+      start:"TBA", last:"TBA", fee:"UR/OBC: ₹500 • Others: ₹250", age:"18–33", qual:"ITI/Diploma",
+      post:"Technician", vacancy:"TBA",
+      notif_url:"http://www.rrbcdg.gov.in", apply_url:"http://www.rrbcdg.gov.in", website:"https://indianrailways.gov.in" },
+    { id:"job-delhi-police-constable-2025", title:"Delhi Police Constable 2025", org:"Delhi Police/SSC",
+      start:"TBA", last:"TBA", fee:"UR/OBC: ₹100 • Others: ₹0", age:"18–25", qual:"12th",
+      post:"Constable (Exe.)", vacancy:"TBA",
+      notif_url:"https://delhipolice.gov.in", apply_url:"https://ssc.nic.in", website:"https://delhipolice.gov.in" },
+    { id:"job-ibps-po-2025", title:"IBPS PO 2025", org:"IBPS",
+      start:"TBA", last:"TBA", fee:"UR/OBC: ₹850 • SC/ST/PwBD: ₹175", qual:"Graduate",
+      post:"Probationary Officer", vacancy:"TBA",
+      notif_url:"https://www.ibps.in", apply_url:"https://www.ibps.in", website:"https://www.ibps.in" },
+    { id:"job-ibps-clerk-2025", title:"IBPS Clerk 2025", org:"IBPS",
+      start:"TBA", last:"TBA", fee:"UR/OBC: ₹850 • SC/ST/PwBD: ₹175", qual:"Graduate",
+      post:"Clerk", vacancy:"TBA",
+      notif_url:"https://www.ibps.in", apply_url:"https://www.ibps.in", website:"https://www.ibps.in" },
+    { id:"job-sbi-po-2025", title:"SBI PO 2025", org:"SBI Careers",
+      start:"TBA", last:"TBA", fee:"UR/OBC: ₹750 • SC/ST/PwBD: ₹0", qual:"Graduate",
+      post:"PO", vacancy:"TBA",
+      notif_url:"https://sbi.co.in/web/careers", apply_url:"https://sbi.co.in/web/careers", website:"https://sbi.co.in" },
+    { id:"job-sbi-clerk-2025", title:"SBI Clerk 2025", org:"SBI Careers",
+      start:"TBA", last:"TBA", fee:"UR/OBC: ₹750 • SC/ST/PwBD: ₹0", qual:"Graduate",
+      post:"Junior Associate", vacancy:"TBA",
+      notif_url:"https://sbi.co.in/web/careers", apply_url:"https://sbi.co.in/web/careers", website:"https://sbi.co.in" },
+    { id:"job-joinindianarmy-2025", title:"Indian Army Agniveer 2025", org:"Join Indian Army",
+      start:"TBA", last:"TBA", fee:"As per rules", age:"17.5–21", qual:"10th/12th/ITI",
+      post:"Agniveer", vacancy:"—",
+      notif_url:"https://joinindianarmy.nic.in", apply_url:"https://joinindianarmy.nic.in", website:"https://joinindianarmy.nic.in" },
+    { id:"job-joinindiannavy-2025", title:"Indian Navy SSR/MR 2025", org:"Join Indian Navy",
+      start:"TBA", last:"TBA", fee:"As per rules", qual:"10th/12th",
+      post:"SSR/MR", vacancy:"—",
+      notif_url:"https://www.joinindiannavy.gov.in", apply_url:"https://www.joinindiannavy.gov.in", website:"https://www.joinindiannavy.gov.in" },
+    { id:"job-airforce-agniveer-2025", title:"Indian Air Force Agniveer 2025", org:"IAF",
+      start:"TBA", last:"TBA", fee:"As per rules", age:"17.5–21", qual:"10+2/3yr Diploma",
+      post:"Agniveer Vayu", vacancy:"—",
+      notif_url:"https://agnipathvayu.cdac.in", apply_url:"https://agnipathvayu.cdac.in", website:"https://indianairforce.nic.in" },
+    { id:"job-bpsc-2025", title:"BPSC 70th CCE 2025", org:"BPSC",
+      start:"TBA", last:"TBA", fee:"UR: ₹600 • Female/SC/ST/PWD: ₹150", qual:"Graduate",
+      post:"Various", vacancy:"TBA",
+      notif_url:"https://www.bpsc.bih.nic.in", apply_url:"https://onlinebpsc.bihar.gov.in", website:"https://www.bpsc.bih.nic.in" },
+    { id:"job-rpsc-2025", title:"RPSC Recruitment 2025 (Various)", org:"RPSC",
+      start:"TBA", last:"TBA", fee:"As per rules", qual:"As per post",
+      post:"Various", vacancy:"TBA",
+      notif_url:"https://rpsc.rajasthan.gov.in", apply_url:"https://rpsc.rajasthan.gov.in", website:"https://rpsc.rajasthan.gov.in" },
+    { id:"job-mpsc-2025", title:"MPSC Group A/B 2025", org:"MPSC",
+      start:"TBA", last:"TBA", fee:"As per rules", qual:"Graduate",
+      post:"Group A/B", vacancy:"TBA",
+      notif_url:"https://mpsc.gov.in", apply_url:"https://mpsc.gov.in", website:"https://mpsc.gov.in" },
+  ],
+
+  /* ----------------- RESULTS (20) ----------------- */
+  results: [
+    { id:"res-ssc-cgl-2024-t1", title:"SSC CGL 2024 Tier-I Result", org:"SSC", date:"TBA",
+      result_url:"https://ssc.nic.in/Portal/Results", website:"https://ssc.nic.in", tag:"New" },
+    { id:"res-ssc-chsl-2024", title:"SSC CHSL 2024 Result", org:"SSC", date:"TBA",
+      result_url:"https://ssc.nic.in/Portal/Results", website:"https://ssc.nic.in" },
+    { id:"res-ssc-gd-2024", title:"SSC GD Constable 2024 Result", org:"SSC",
+      result_url:"https://ssc.nic.in/Portal/Results", website:"https://ssc.nic.in" },
+    { id:"res-rrb-ntpc-2024", title:"RRB NTPC 2024 Result", org:"RRBs",
+      result_url:"http://www.rrbcdg.gov.in", website:"https://indianrailways.gov.in" },
+    { id:"res-rrb-groupd-2024", title:"RRB Group D 2024 Result", org:"RRBs",
+      result_url:"http://www.rrbcdg.gov.in", website:"https://indianrailways.gov.in" },
+    { id:"res-delhi-police-2024", title:"Delhi Police Constable 2024 Result", org:"Delhi Police/SSC",
+      result_url:"https://delhipolice.gov.in", website:"https://delhipolice.gov.in" },
+    { id:"res-ctet-2024", title:"CTET 2024 Result", org:"CBSE",
+      result_url:"https://ctet.nic.in", website:"https://ctet.nic.in" },
+    { id:"res-nta-neet-ug-2024", title:"NEET UG 2024 Result", org:"NTA",
+      result_url:"https://neet.nta.nic.in", website:"https://nta.ac.in" },
+    { id:"res-jee-main-2025-s1", title:"JEE Main 2025 Session 1 Result", org:"NTA",
+      result_url:"https://jeemain.nta.ac.in", website:"https://nta.ac.in" },
+    { id:"res-cuet-ug-2025", title:"CUET UG 2025 Result", org:"NTA",
+      result_url:"https://cuet.samarth.ac.in", website:"https://nta.ac.in" },
+    { id:"res-upsc-pre-2025", title:"UPSC Civil Services (Pre) 2025 Result", org:"UPSC",
+      result_url:"https://upsc.gov.in", website:"https://upsc.gov.in" },
+    { id:"res-ibps-po-2024", title:"IBPS PO 2024 Result", org:"IBPS",
+      result_url:"https://www.ibps.in", website:"https://www.ibps.in" },
+    { id:"res-ibps-clerk-2024", title:"IBPS Clerk 2024 Result", org:"IBPS",
+      result_url:"https://www.ibps.in", website:"https://www.ibps.in" },
+    { id:"res-sbi-po-2024", title:"SBI PO 2024 Final Result", org:"SBI",
+      result_url:"https://sbi.co.in/web/careers", website:"https://sbi.co.in" },
+    { id:"res-sbi-clerk-2024", title:"SBI Clerk 2024 Final Result", org:"SBI",
+      result_url:"https://sbi.co.in/web/careers", website:"https://sbi.co.in" },
+    { id:"res-upsssc-pet-2024", title:"UPSSSC PET 2024 Result", org:"UPSSSC",
+      result_url:"http://upsssc.gov.in", website:"http://upsssc.gov.in" },
+    { id:"res-bpsc-69", title:"BPSC 69th Result", org:"BPSC",
+      result_url:"https://www.bpsc.bih.nic.in", website:"https://www.bpsc.bih.nic.in" },
+    { id:"res-rpsc-2024", title:"RPSC Various 2024 Results", org:"RPSC",
+      result_url:"https://rpsc.rajasthan.gov.in/results", website:"https://rpsc.rajasthan.gov.in" },
+    { id:"res-mpsc-2024", title:"MPSC 2024 Results", org:"MPSC",
+      result_url:"https://mpsc.gov.in/Results", website:"https://mpsc.gov.in" },
+    { id:"res-ssc-jht-2024", title:"SSC JHT 2024 Result", org:"SSC",
+      result_url:"https://ssc.nic.in/Portal/Results", website:"https://ssc.nic.in" },
+  ],
+
+  /* ----------------- ADMIT CARDS (20) ----------------- */
+  admit: [
+    { id:"adm-ssc-cgl-2025-t2", title:"SSC CGL 2025 Tier-II Admit Card", org:"SSC",
+      admit_url:"https://ssc.nic.in/Portal/AdmitCard", website:"https://ssc.nic.in", tag:"New" },
+    { id:"adm-ssc-chsl-2025", title:"SSC CHSL 2025 Admit Card", org:"SSC",
+      admit_url:"https://ssc.nic.in/Portal/AdmitCard", website:"https://ssc.nic.in" },
+    { id:"adm-ssc-gd-2025", title:"SSC GD 2025 Admit Card", org:"SSC",
+      admit_url:"https://ssc.nic.in/Portal/AdmitCard", website:"https://ssc.nic.in" },
+    { id:"adm-ssc-mts-2025", title:"SSC MTS 2025 Admit Card", org:"SSC",
+      admit_url:"https://ssc.nic.in/Portal/AdmitCard", website:"https://ssc.nic.in" },
+    { id:"adm-rrb-alp-2025", title:"RRB ALP 2025 Admit Card", org:"RRBs",
+      admit_url:"http://www.rrbcdg.gov.in", website:"https://indianrailways.gov.in" },
+    { id:"adm-rrb-ntpc-2025", title:"RRB NTPC 2025 Admit Card", org:"RRBs",
+      admit_url:"http://www.rrbcdg.gov.in", website:"https://indianrailways.gov.in" },
+    { id:"adm-delhi-police-2025", title:"Delhi Police Constable 2025 Admit Card", org:"Delhi Police/SSC",
+      admit_url:"https://delhipolice.gov.in", website:"https://delhipolice.gov.in" },
+    { id:"adm-ctet-jan-2025", title:"CTET January 2025 Admit Card", org:"CBSE",
+      admit_url:"https://ctet.nic.in", website:"https://ctet.nic.in" },
+    { id:"adm-jee-main-2025-s1", title:"JEE Main 2025 Session 1 Admit Card", org:"NTA",
+      admit_url:"https://jeemain.nta.ac.in", website:"https://nta.ac.in" },
+    { id:"adm-neet-ug-2025", title:"NEET UG 2025 Admit Card", org:"NTA",
+      admit_url:"https://neet.nta.nic.in", website:"https://nta.ac.in" },
+    { id:"adm-cuet-ug-2025", title:"CUET UG 2025 Admit Card", org:"NTA",
+      admit_url:"https://cuet.samarth.ac.in", website:"https://nta.ac.in" },
+    { id:"adm-upsc-pre-2025", title:"UPSC CSE (Pre) 2025 Admit Card", org:"UPSC",
+      admit_url:"https://upsconline.nic.in/eadmitcard", website:"https://upsc.gov.in" },
+    { id:"adm-ibps-po-2025", title:"IBPS PO 2025 Admit Card", org:"IBPS",
+      admit_url:"https://www.ibps.in", website:"https://www.ibps.in" },
+    { id:"adm-ibps-clerk-2025", title:"IBPS Clerk 2025 Admit Card", org:"IBPS",
+      admit_url:"https://www.ibps.in", website:"https://www.ibps.in" },
+    { id:"adm-sbi-po-2025", title:"SBI PO 2025 Admit Card", org:"SBI",
+      admit_url:"https://sbi.co.in/web/careers", website:"https://sbi.co.in" },
+    { id:"adm-sbi-clerk-2025", title:"SBI Clerk 2025 Admit Card", org:"SBI",
+      admit_url:"https://sbi.co.in/web/careers", website:"https://sbi.co.in" },
+    { id:"adm-upsssc-pet-2025", title:"UPSSSC PET 2025 Admit Card", org:"UPSSSC",
+      admit_url:"http://upsssc.gov.in", website:"http://upsssc.gov.in" },
+    { id:"adm-bpsc-2025", title:"BPSC 70th Admit Card", org:"BPSC",
+      admit_url:"https://www.bpsc.bih.nic.in", website:"https://www.bpsc.bih.nic.in" },
+    { id:"adm-rpsc-2025", title:"RPSC Admit Card 2025", org:"RPSC",
+      admit_url:"https://rpsc.rajasthan.gov.in/admitCard", website:"https://rpsc.rajasthan.gov.in" },
+    { id:"adm-mpsc-2025", title:"MPSC Admit Card 2025", org:"MPSC",
+      admit_url:"https://mpsc.gov.in/AdmitCard", website:"https://mpsc.gov.in" },
+  ],
+
+  /* ----------------- SCHEMES (20) ----------------- */
+  schemes: [
+    { id:"sch-pmkisan", title:"PM-KISAN eKYC / Status", org:"PM-KISAN", website:"https://pmkisan.gov.in", notif_url:"https://pmkisan.gov.in" },
+    { id:"sch-eshram", title:"e-Shram Card Registration/Update", org:"Ministry of Labour", website:"https://eshram.gov.in", notif_url:"https://eshram.gov.in" },
+    { id:"sch-abha", title:"ABHA (Health ID) Create/Link", org:"NHS/ABDM", website:"https://abha.abdm.gov.in", notif_url:"https://abdm.gov.in" },
+    { id:"sch-ayushman", title:"Ayushman Bharat (PM-JAY) Card", org:"NHA", website:"https://pmjay.gov.in", notif_url:"https://pmjay.gov.in" },
+    { id:"sch-pmayu", title:"PM Awas Yojana (Urban)", org:"MoHUA", website:"https://pmay-urban.gov.in", notif_url:"https://pmay-urban.gov.in" },
+    { id:"sch-pmjay-secc", title:"Ayushman Eligibility (SECC)", org:"NHA", website:"https://mera.pmjay.gov.in", notif_url:"https://pmjay.gov.in" },
+    { id:"sch-kcc", title:"Kisan Credit Card (KCC)", org:"Agriculture", website:"https://agricoop.nic.in", notif_url:"https://agricoop.nic.in" },
+    { id:"sch-nps", title:"NPS Registration/Status", org:"PFRDA", website:"https://enps.nsdl.com", notif_url:"https://pfrda.org.in" },
+    { id:"sch-sukanya", title:"Sukanya Samriddhi Yojana", org:"India Post/Banks", website:"https://www.indiapost.gov.in", notif_url:"https://www.rbi.org.in" },
+    { id:"sch-lpg", title:"LPG Subsidy / PAHAL", org:"MoPNG", website:"https://mylpg.in", notif_url:"https://mylpg.in" },
+    { id:"sch-janani", title:"Janani Suraksha Yojana", org:"MoHFW", website:"https://nhm.gov.in", notif_url:"https://nhm.gov.in" },
+    { id:"sch-pmfbY", title:"PM Fasal Bima Yojana", org:"MoA&FW", website:"https://pmfby.gov.in", notif_url:"https://pmfby.gov.in" },
+    { id:"sch-nrhm", title:"NHM State Portals", org:"MoHFW", website:"https://nhm.gov.in", notif_url:"https://nhm.gov.in" },
+    { id:"sch-udid", title:"UDID (Divyang) Card", org:"DEPwD", website:"https://www.swavlambancard.gov.in", notif_url:"https://depwd.gov.in" },
+    { id:"sch-epfo-pension", title:"EPS Pension (EPFO)", org:"EPFO", website:"https://www.epfindia.gov.in", notif_url:"https://www.epfindia.gov.in" },
+    { id:"sch-atma-nirbhar", title:"Atmanirbhar/Startup India", org:"DPIIT", website:"https://www.startupindia.gov.in", notif_url:"https://dpiit.gov.in" },
+    { id:"sch-ncs", title:"National Career Service", org:"MoLE", website:"https://www.ncs.gov.in", notif_url:"https://labour.gov.in" },
+    { id:"sch-pmkvy", title:"PMKVY Skill Development", org:"MSDE", website:"https://www.pmkvyofficial.org", notif_url:"https://msde.gov.in" },
+    { id:"sch-jan-dhan", title:"PM Jan Dhan Yojana", org:"DFS", website:"https://pmjdy.gov.in", notif_url:"https://pmjdy.gov.in" },
+    { id:"sch-pmjvdy", title:"PM Jan Vikas / Minority Schemes", org:"MoMA", website:"https://www.minorityaffairs.gov.in", notif_url:"https://www.minorityaffairs.gov.in" },
+  ],
+
+  /* ----------------- DAILY LIFE (20) ----------------- */
+  daily: [
+    { id:"dl-aadhaar-update", title:"Aadhaar Update / PVC", org:"UIDAI", website:"https://myaadhaar.uidai.gov.in", notif_url:"https://uidai.gov.in" },
+    { id:"dl-pan-nsdl", title:"PAN Apply/Update (NSDL)", org:"NSDL", website:"https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html", notif_url:"https://www.incometax.gov.in" },
+    { id:"dl-pan-uti", title:"PAN Services (UTIITSL)", org:"UTIITSL", website:"https://www.pan.utiitsl.com", notif_url:"https://utiitsl.com" },
+    { id:"dl-digilocker", title:"DigiLocker Login", org:"MeitY", website:"https://digilocker.gov.in", notif_url:"https://digilocker.gov.in" },
+    { id:"dl-fastag", title:"FASTag KYC Update", org:"NHAI/IHMCL", website:"https://fastag.ihmcl.com", notif_url:"https://ihmcl.co.in" },
+    { id:"dl-epfo-passbook", title:"EPFO Passbook", org:"EPFO", website:"https://passbook.epfindia.gov.in", notif_url:"https://www.epfindia.gov.in" },
+    { id:"dl-uan", title:"UAN Services", org:"EPFO", website:"https://unifiedportal-mem.epfindia.gov.in/memberinterface/", notif_url:"https://www.epfindia.gov.in" },
+    { id:"dl-esic", title:"ESIC Services", org:"ESIC", website:"https://www.esic.gov.in", notif_url:"https://www.esic.gov.in" },
+    { id:"dl-voter", title:"Voter Services (NVSP)", org:"ECI", website:"https://voters.eci.gov.in", notif_url:"https://eci.gov.in" },
+    { id:"dl-passport", title:"Passport Seva", org:"MEA", website:"https://www.passportindia.gov.in", notif_url:"https://www.passportindia.gov.in" },
+    { id:"dl-parivahan", title:"Parivahan (DL/RC/LL)", org:"MoRTH", website:"https://parivahan.gov.in", notif_url:"https://parivahan.gov.in" },
+    { id:"dl-income-tax", title:"Income Tax e-Filing", org:"CBDT", website:"https://www.incometax.gov.in", notif_url:"https://www.incometax.gov.in" },
+    { id:"dl-epfo-claim", title:"EPFO Claim/Track", org:"EPFO", website:"https://unifiedportal-mem.epfindia.gov.in/memberinterface/", notif_url:"https://www.epfindia.gov.in" },
+    { id:"dl-nadra", title:"CSC Services (Statewise)", org:"CSC", website:"https://www.digilocker.gov.in/partners", notif_url:"https://csc.gov.in" },
+    { id:"dl-jan-seva", title:"ServicePlus (states)", org:"NIC", website:"https://serviceonline.gov.in", notif_url:"https://serviceonline.gov.in" },
+    { id:"dl-ration", title:"Ration Card (State Portals)", org:"States", website:"https://services.india.gov.in", notif_url:"https://services.india.gov.in" },
+    { id:"dl-abc-id", title:"ABC ID — Academic Bank of Credits", org:"MoE", website:"https://www.abc.gov.in", notif_url:"https://www.abc.gov.in" },
+    { id:"dl-scholarship", title:"National Scholarship Portal (NSP)", org:"MoE", website:"https://scholarships.gov.in", notif_url:"https://scholarships.gov.in" },
+    { id:"dl-district-court", title:"District Court Services", org:"eCourts", website:"https://services.ecourts.gov.in", notif_url:"https://ecourts.gov.in" },
+    { id:"dl-umang", title:"UMANG (All Govt Services)", org:"MeitY", website:"https://web.umang.gov.in", notif_url:"https://umang.gov.in" },
+  ],
+
+  /* ----------------- DOCUMENTS (20) ----------------- */
+  docs: [
+    { id:"doc-income", title:"Income Certificate (State)", org:"eDistrict", website:"https://services.india.gov.in" },
+    { id:"doc-caste", title:"Caste Certificate (State)", org:"eDistrict", website:"https://services.india.gov.in" },
+    { id:"doc-residence", title:"Residence/Domicile Certificate", org:"eDistrict", website:"https://services.india.gov.in" },
+    { id:"doc-birth", title:"Birth Certificate (CRS)", org:"CRS", website:"https://crsorgi.gov.in" },
+    { id:"doc-death", title:"Death Certificate (CRS)", org:"CRS", website:"https://crsorgi.gov.in" },
+    { id:"doc-marriage", title:"Marriage Certificate", org:"ULBs/State", website:"https://services.india.gov.in" },
+    { id:"doc-character", title:"Character/Police Verification", org:"State Police", website:"https://services.india.gov.in" },
+    { id:"doc-ncl", title:"Non-Creamy Layer Certificate", org:"State", website:"https://services.india.gov.in" },
+    { id:"doc-obc", title:"OBC Certificate", org:"State", website:"https://services.india.gov.in" },
+    { id:"doc-scst", title:"SC/ST Certificate", org:"State", website:"https://services.india.gov.in" },
+    { id:"doc-ews", title:"EWS Certificate", org:"State", website:"https://services.india.gov.in" },
+    { id:"doc-domicile", title:"Domicile Certificate (States)", org:"State", website:"https://services.india.gov.in" },
+    { id:"doc-pcc", title:"Police Clearance Certificate (Passport)", org:"MEA", website:"https://www.passportindia.gov.in" },
+    { id:"doc-dl", title:"Driving Licence Services", org:"MoRTH", website:"https://parivahan.gov.in" },
+    { id:"doc-rc", title:"Vehicle RC Services", org:"MoRTH", website:"https://parivahan.gov.in" },
+    { id:"doc-epic", title:"EPIC/Voter ID Download", org:"ECI", website:"https://voters.eci.gov.in" },
+    { id:"doc-pan", title:"PAN Reprint/Correction", org:"NSDL/UTI", website:"https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" },
+    { id:"doc-aadhaar-pvc", title:"Aadhaar PVC/Update", org:"UIDAI", website:"https://myaadhaar.uidai.gov.in" },
+    { id:"doc-digilocker-docs", title:"Digilocker Issued Docs", org:"MeitY", website:"https://digilocker.gov.in" },
+    { id:"doc-rtps", title:"RTPS / eDistrict Services", org:"States", website:"https://services.india.gov.in" },
+  ],
+};
+
+/* ===================== RENDERING ===================== */
+const map = {
+  results: () => document.getElementById('list-results'),
+  admit:   () => document.getElementById('list-admit'),
+  jobs:    () => document.getElementById('list-jobs'),
+  schemes: () => document.getElementById('list-schemes'),
+  daily:   () => document.getElementById('list-daily'),
+  docs:    () => document.getElementById('list-docs'),
+};
+function makeItem(it){
+  const li=document.createElement('li');
+  li.innerHTML = `
+    <div class="item">
+      <a class="t" href="#/details/${encodeURIComponent(it.id)}">${it.title}</a>
+      <div class="meta">${it.org || ''} ${it.date? ' • '+it.date:''}</div>
+    </div>
+    ${it.tag?`<span class="tag">${it.tag}</span>`:''}
+  `;
+  return li;
+}
+function renderHome(){
+  ['results','admit','jobs','schemes','daily','docs'].forEach(k=>{
+    const ul = map[k]();
+    if(!ul) return;
+    ul.innerHTML='';
+    (DATA[k]||[]).forEach(it=>ul.appendChild(makeItem(it)));
+  });
+  document.getElementById('lastUpdate').textContent = "Updated: " + new Date(DATA.updatedAt||Date.now()).toLocaleString();
+  document.getElementById('yr').textContent = new Date().getFullYear();
+}
+function doSearch(){
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  document.querySelectorAll('.list').forEach(ul=>{
+    Array.from(ul.children).forEach(li=>{
+      const txt = li.querySelector('.t').textContent.toLowerCase();
+      li.classList.toggle('hidden', q && !txt.includes(q));
+    });
+  });
+}
+function resetSearch(){
+  const el=document.getElementById('q'); if(el) el.value='';
+  document.querySelectorAll('.list .hidden').forEach(x=>x.classList.remove('hidden'));
+}
+
+/* ===================== DETAILS VIEW (Router) ===================== */
+function getAllItems(){
+  return [...DATA.jobs, ...DATA.results, ...DATA.admit, ...DATA.schemes, ...DATA.daily, ...DATA.docs];
+}
+function showDetails(id){
+  const item = getAllItems().find(x=>x.id===id);
+  const details = document.getElementById('view-details');
+  const home = document.getElementById('view-home');
+  const root = document.getElementById('root');
+  if(!item){
+    root.innerHTML = `<h2>Not Found</h2><p>Item doesn't exist. <a href="#/">Go Home</a></p>`;
+  } else {
+    root.innerHTML = `
+      <div class="top">
+        <h2 style="margin:0">${item.title}</h2>
+        ${item.tag?`<span class="badge2">${item.tag}</span>`:''}
+      </div>
+      <p style="margin-top:0;color:#cbd5e1">${item.org || ''} ${item.date? ' • '+item.date:''}</p>
+
+      <div class="grid2">
+        ${item.start?`<div><span class="k">Start Date:</span> <span class="v">${item.start}</span></div>`:''}
+        ${item.last?`<div><span class="k">Last Date:</span> <span class="v">${item.last}</span></div>`:''}
+        ${item.fee?`<div><span class="k">Application Fee:</span> <span class="v">${item.fee}</span></div>`:''}
+        ${item.age?`<div><span class="k">Age Limit:</span> <span class="v">${item.age}</span></div>`:''}
+        ${item.qual?`<div><span class="k">Qualification:</span> <span class="v">${item.qual}</span></div>`:''}
+        ${item.post?`<div><span class="k">Post Name:</span> <span class="v">${item.post}</span></div>`:''}
+        ${item.vacancy?`<div><span class="k">Vacancies:</span> <span class="v">${item.vacancy}</span></div>`:''}
+        ${item.status?`<div><span class="k">Status:</span> <span class="v">${item.status}</span></div>`:''}
+      </div>
+
+      <div style="margin-top:16px">
+        ${item.notif_url?`<a class="btn" href="${item.notif_url}" target="_blank" rel="noopener">Official Notification (PDF)</a>`:''}
+        ${item.apply_url?`<a class="btn" href="${item.apply_url}" target="_blank" rel="noopener">Apply Online</a>`:''}
+        ${item.result_url?`<a class="btn" href="${item.result_url}" target="_blank" rel="noopener">Check Result</a>`:''}
+        ${item.admit_url?`<a class="btn" href="${item.admit_url}" target="_blank" rel="noopener">Download Admit Card</a>`:''}
+        ${item.website?`<a class="btn" href="${item.website}" target="_blank" rel="noopener">Official Website</a>`:''}
+      </div>
+
+      ${item.note?`<p style="margin-top:16px;color:#cbd5e1">${item.note}</p>`:''}
+    `;
+  }
+  home.classList.add('hidden');
+  details.classList.remove('hidden');
+}
+function showHome(){
+  document.getElementById('view-details').classList.add('hidden');
+  document.getElementById('view-home').classList.remove('hidden');
+}
+function router(){
+  const hash = location.hash || '#/';
+  const [_, route, param] = hash.split('/');
+  if(route==='details' && param){
+    showDetails(decodeURIComponent(param));
+  } else {
+    showHome();
+  }
+}
+window.addEventListener('hashchange', router);
+
+/* ===================== INIT ===================== */
+renderHome();
+router();
+</script>
 </body>
 </html>
